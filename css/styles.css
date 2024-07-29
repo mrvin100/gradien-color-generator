@@ -1,0 +1,241 @@
+@charset "utf-8";
+/* custom css file made by JeanDoe */
+
+/* import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* css variables */
+
+:root{
+	--main-clr: #567;
+	--light-bg: #d1e1f1;
+	--light-clr: #7a7b7c;
+	--black: #1a1b1c;
+	--white: #fff;
+	
+	--body-font: 'Poppins','Ubuntu Mono', sans-serif;
+	--border: 1px solid rgba(0,0,0,.1);
+}
+
+/* initialisation */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	font-weight: normal;
+}
+::selection{
+	background: var(--main-clr);
+	color: var(--white);
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+	background: var(--light-bg);
+	font-family: var(--body-font);
+	flex-direction: column;
+	padding: 1rem;
+}
+
+section{
+	padding: 1rem;
+}
+
+/* gradient color section start */
+
+.wrapper{
+	background: var(--white);
+	border-radius: .25rem;
+	width: 100%;
+	max-width: 25rem;
+	box-shadow: 0 15px 30px rgba(0,0,0,.6);
+	margin: 1rem;
+}
+.wrapper .gradient-box{
+	height: 10rem;
+	width: 100%;
+	border-radius: .25rem;
+	background: linear-gradient(to left top, #5665e9, #a271f8);
+}
+
+.wrapper .row{
+	display: flex;
+	margin: 1rem 0;
+	justify-content: space-between;
+	width: 100%;
+	gap: 1rem;
+}
+
+.options p{
+	font-size: 1.1rem;
+	margin-bottom: .5rem;
+	color: var(--black);
+}
+
+.row :where(.column, button){
+	width: calc(100% / 2 - 12px);
+}
+
+.options .select-box{
+	padding: .7rem 1rem;
+	border: 1px solid #aaa;
+	font-size: .938rem;
+	letter-spacing: .05rem;
+	background: none;
+	color: var(--light-clr);
+	cursor: pointer;
+	font-family: var(--body-font);
+	text-transform: uppercase;
+}
+
+
+.options .palette{
+	text-align: right;
+}
+
+.options .colors{
+	
+}
+.options input{
+	height: 2.9rem;
+/*	width: calc(100% / 2 - 1.5rem);*/
+	width: 3.9rem;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 .3rem .3rem
+}
+
+.options input:first-child{
+	margin-left: 0;
+}
+
+.wrapper textarea{
+	width: 100%;
+	color: var(--black);
+	font-size: .813rem;
+	resize: none;
+	padding: 1rem;
+	border-radius: .25rem;
+	border: var(--border);
+	line-height: 1.5;
+}
+
+.buttons button{
+	padding: .7rem .2rem;
+	color: var(--main-clr);
+	cursor: pointer;
+	background: var(--light-bg);
+	border-radius: .25rem;
+	font-size: .938rem;
+	font-family: var(--body-font);
+	font-weight: 500;
+	text-transform: capitalize;
+	transition: all .3s;
+}
+
+.buttons button i{
+	margin-right: .3rem;
+}
+.buttons button:hover{
+	background: #dbebfb;
+}
+
+
+
+
+/* notification section starts */
+
+
+.notification{
+	padding: .5rem;
+	border-radius: .25rem;
+	max-width: 25rem;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	background: var(--white);
+	position: relative;
+	margin-top: 2rem;
+}
+
+.notification .info_icon{
+	position: absolute;
+	top: -1rem;
+	right: -1rem;
+	border-radius: 50%;
+	background: var(--main-clr);
+	color: var(--white);
+	display: block;
+	height: 2rem;
+	width: 2rem;
+	text-align: center;
+	line-height: 1.7rem;
+}
+.notification .title{
+	color: #232426;
+	font-size: 1.2rem;
+	text-align: center;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+.notification .title:hover{
+	color: var(--main-clr);
+}
+.content{
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: .25rem;
+	border: 1px solid rgba(0,0,0,.1);
+	color: #232426;
+	font-weight: 200;
+	font-size: .938rem;
+	transition: all .3s;
+	display: none;
+}
+.content.active{
+	display: block;
+}
+.notification .content span{
+	color: var(--main-clr);
+}
+
+.close{
+	position: absolute;
+	right: 1rem;
+	top: 1.5rem;
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: #232426;
+	display: none;
+}
+
+.close.active{
+	display: block;
+	color: var(--light-clr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
